@@ -1,0 +1,24 @@
+$grid-gutter: rem($global-spacing-unit);
+
+.grid {
+	list-style: none;
+    margin:  0;
+    padding: 0;
+    margin-left: -$grid-gutter;
+    
+    &--gutterless {
+        margin-left: 0;
+    }
+	
+	&__item {
+		display: inline-block;
+        padding-left: $grid-gutter;
+        margin-bottom: $grid-gutter;
+        vertical-align: top;
+        width: 100%;
+	}
+    
+    &__item--gutterless {
+        padding-left: 0;
+	}
+}

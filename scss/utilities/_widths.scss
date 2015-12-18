@@ -1,0 +1,8 @@
+@each $key, $breakpoint in $breakpoints {
+	$alias: $key;
+	
+	@include breakpoint($alias) {
+		@include generate-widths($widths-columns, $widths-seperator, $alias);
+	}
+}
+

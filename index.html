@@ -1,0 +1,950 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Grid prototype</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div class="container container--sm">
+  <h1>Motiviations for the new flexible grid</h1>
+  <ul>
+    <li>Not restrained to a fixed pixel grid. % and REMs only.</li>
+    <li>Column widths can change at different breakpoints.</li>
+    <li>Vertically align content easily.</li>
+    <li>No more clear floats / clearfixes.</li>  
+    <li>It can handle any width you throw at it ranging from twelfths, all the way to one-whole.</li>
+    <li>Nest grids infinite number of times.</li>
+  </ul> 
+  
+  <h2>Tests</h2> 
+  <ul>
+    <li>IE Edge - Passed</li>
+    <li>IE11 - Passed</li>
+    <li>IE10 - Passed</li>
+    <li>IE9 - Passed</li>
+    <li>Firefox (32 - 43) - Passed</li>
+    <li>Chrome (37 - 48) - Passed</li>
+    <li>Safari (5 - 9) - Passed</li>
+    <li>Basically any browser that <a href="http://caniuse.com/#feat=rem" target="_blank">supports REM units</a> will support the grid.</li>
+    <li>Could write a px fallback for browsers that don't support REM units in the future.</li>
+  </ul>
+  
+  <h2>To be added</h2>
+  <ul>
+    <li>Column offsetting</li>  
+  </ul>
+</div> 
+
+<div class="container container--xl">  
+  <h1>Grid columns</h1> 
+  
+  <p><strong>Columns can be split from twelfths all the way to one whole </strong></p> 
+  
+  <div class="grid">
+    
+    <div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-12--md">
+      <div class="panel">
+        <p>1/12--md</p>
+      </div>
+    </div>
+    
+    <div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-11--md">
+      <div class="panel">
+        <p>1/11--md</p>
+      </div>
+    </div>
+    
+    <div class="grid__item u-1-10--md">
+      <div class="panel">
+        <p>1/10--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-10--md">
+      <div class="panel">
+        <p>1/10--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-10--md">
+      <div class="panel">
+        <p>1/10--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-10--md">
+      <div class="panel">
+        <p>1/10--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-10--md">
+      <div class="panel">
+        <p>1/10--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-10--md">
+      <div class="panel">
+        <p>1/10--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-10--md">
+      <div class="panel">
+        <p>1/10--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-10--md">
+      <div class="panel">
+        <p>1/10--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-10--md">
+      <div class="panel">
+        <p>1/10--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-10--md">
+      <div class="panel">
+        <p>1/10--md</p>
+      </div>
+    </div>
+    
+    <div class="grid__item u-1-9--md">
+      <div class="panel">
+        <p>1/9--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-9--md">
+      <div class="panel">
+        <p>1/9--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-9--md">
+      <div class="panel">
+        <p>1/9--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-9--md">
+      <div class="panel">
+        <p>1/9--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-9--md">
+      <div class="panel">
+        <p>1/9--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-9--md">
+      <div class="panel">
+        <p>1/9--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-9--md">
+      <div class="panel">
+        <p>1/9--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-9--md">
+      <div class="panel">
+        <p>1/9--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-9--md">
+      <div class="panel">
+        <p>1/9--md</p>
+      </div>
+    </div>
+    
+    <div class="grid__item u-1-8--md">
+      <div class="panel">
+        <p>1/8--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-8--md">
+      <div class="panel">
+        <p>1/8--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-8--md">
+      <div class="panel">
+        <p>1/8--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-8--md">
+      <div class="panel">
+        <p>1/8--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-8--md">
+      <div class="panel">
+        <p>1/8--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-8--md">
+      <div class="panel">
+        <p>1/8--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-8--md">
+      <div class="panel">
+        <p>1/8--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-8--md">
+      <div class="panel">
+        <p>1/8--md</p>
+      </div>
+    </div>
+    
+    <div class="grid__item u-1-7--md">
+      <div class="panel">
+        <p>1/7--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-7--md">
+      <div class="panel">
+        <p>1/7--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-7--md">
+      <div class="panel">
+        <p>1/7--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-7--md">
+      <div class="panel">
+        <p>1/7--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-7--md">
+      <div class="panel">
+        <p>1/7--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-7--md">
+      <div class="panel">
+        <p>1/7--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-7--md">
+      <div class="panel">
+        <p>1/7--md</p>
+      </div>
+    </div>
+    
+    <div class="grid__item u-1-6--md">
+      <div class="panel">
+        <p>1/6--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-6--md">
+      <div class="panel">
+        <p>1/6--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-6--md">
+      <div class="panel">
+        <p>1/6--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-6--md">
+      <div class="panel">
+        <p>1/6--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-6--md">
+      <div class="panel">
+        <p>1/6--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-6--md">
+      <div class="panel">
+        <p>1/6--md</p>
+      </div>
+    </div>
+  
+    <div class="grid__item u-1-5--md">
+      <div class="panel">
+        <p>1/5--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-5--md">
+      <div class="panel">
+        <p>1/5--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-5--md">
+      <div class="panel">
+        <p>1/5--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-5--md">
+      <div class="panel">
+        <p>1/5--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-5--md">
+      <div class="panel">
+        <p>1/5--md</p>
+      </div>
+    </div>
+    
+    <div class="grid__item u-1-4--md">
+      <div class="panel">
+        <p>1/4--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-4--md">
+      <div class="panel">
+        <p>1/4--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-4--md">
+      <div class="panel">
+        <p>1/4--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-4--md">
+      <div class="panel">
+        <p>1/4--md</p>
+      </div>
+    </div>
+    
+    <div class="grid__item u-1-3--md">
+      <div class="panel">
+        <p>1/3--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-3--md">
+      <div class="panel">
+        <p>1/3--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-3--md">
+      <div class="panel">
+        <p>1/3--md</p>
+      </div>
+    </div>
+    
+    <div class="grid__item u-1-2--md">
+      <div class="panel">
+        <p>1/2--md</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--md">
+      <div class="panel">
+        <p>1/2--md</p>
+      </div>
+    </div>
+    
+    <div class="grid__item u-1-1--md">
+      <div class="panel">
+        <p>1/1--md</p>
+      </div>
+    </div>
+  
+  </div>
+  
+</div>
+
+<div class="container container--xl">
+
+  <h1>Grid with breakpoint columns</h1>
+  
+  <p><strong>Resize the screen</strong></p>
+  
+  <div class="grid">
+    
+    <div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-2--sm u-1-4--md u-1-6--lg u-1-12--xl">
+      <div class="panel">
+        <p>1/2--sm</p>
+        <p>1/4--md</p>
+        <p>1/6--lg</p>
+        <p>1/12--xl</p>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<div class="container container--xl">  
+  <h1>Nested grid columns</h1> 
+  
+  <div class="grid">
+    
+    <div class="grid__item u-1-3--md">
+      <div class="panel">
+        <p>1/3--md</p>
+        
+        <div class="grid">
+      
+          <div class="grid__item u-1-2--md">
+              <div class="panel u-bg-beta">
+                <p>Look at me, I'm nested!</p>
+              </div>
+          </div><!--
+      --><div class="grid__item u-1-2--md">
+              <div class="panel u-bg-beta">
+                <p>Look at me, I'm nested!</p>
+              </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div><!--
+  --><div class="grid__item u-2-3--md">
+      <div class="panel">
+        <p>2/3--md</p>
+        
+        <div class="grid">
+      
+          <div class="grid__item u-1-2--md">
+              <div class="panel u-bg-beta">
+                <p>Look at me, I'm nested!</p>
+              </div>
+          </div><!--
+      --><div class="grid__item u-1-2--md">
+              <div class="panel u-bg-beta">
+                <p>Look at me, I'm nested!</p>
+                
+                <div class="grid">
+      
+                  <div class="grid__item u-1-2--md">
+                      <div class="panel u-bg-gamma">
+                        <p>Look at me, I'm nested... again!</p>
+                      </div>
+                  </div><!--
+               --><div class="grid__item u-1-2--md">
+                      <div class="panel u-bg-gamma">
+                        <p>Look at me, I'm nested... again!</p>
+                      </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div><!--
+  -->
+  
+</div>
+
+<div class="container container--xl">
+    
+  <h1>Grid with no gutters</h1>
+  
+  <div class="grid grid--gutterless">
+    
+    <div class="grid__item grid__item--gutterless u-2-12--md">
+      <div class="panel">
+        <p>2-12-sm</p>
+      </div>
+    </div><!--
+  --><div class="grid__item grid__item--gutterless u-4-12--md">
+      <div class="panel">
+        <p>4-12-sm</p>
+      </div>
+    </div><!--
+  --><div class="grid__item grid__item--gutterless u-6-12--md">
+      <div class="panel">
+        <p>6-12-sm</p>
+      </div>
+    </div><!--
+  --><div class="grid__item grid__item--gutterless u-1-2--sm">
+      <div class="panel">
+        <p>1-2-sm</p>
+      </div>
+    </div><!--
+  --><div class="grid__item grid__item--gutterless u-1-2--sm">
+      <div class="panel">
+        <p>1-2-sm</p>
+      </div>
+    </div>
+  
+  </div>
+
+</div>
+
+<div class="container container--xl">
+
+  <h1>Grid columns vertically aligned</h1> 
+  
+  <h2>Top (default)</h2> 
+  
+  <div class="grid">
+    
+    <div class="grid__item u-1-3--md">
+      <div class="panel">
+        <p>1/3--md</p>
+        <p>Aenean massa. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-3--md">
+      <div class="panel">
+        <p>1/3--md</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-3--md">
+      <div class="panel">
+        <p>1/3--md</p>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<div class="container container--xl">
+  
+  <h2>Middle</h2>
+  
+  <div class="grid">
+    
+    <div class="grid__item u-1-3--md u-valign-middle">
+      <div class="panel">
+        <p>1/3--md</p>
+        <p>u-valign-middle</p>
+        <p>Aenean massa. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-3--md u-valign-middle">
+      <div class="panel">
+        <p>1/3--md</p>
+        <p>u-valign-middle</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-3--md u-valign-middle">
+      <div class="panel">
+        <p>1/3--md</p>
+        <p>u-valign-middle</p>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+<div class="container container--xl">
+  
+  <h2>Bottom</h2> 
+  
+  <div class="grid">
+    
+    <div class="grid__item u-1-3--md u-valign-bottom">
+      <div class="panel">
+        <p>1/3--md</p>
+        <p>u-valign-bottom</p>
+        <p>Aenean massa. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-3--md u-valign-bottom">
+      <div class="panel">
+        <p>1/3--md</p>
+        <p>u-valign-bottom</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+      </div>
+    </div><!--
+  --><div class="grid__item u-1-3--md u-valign-bottom">
+      <div class="panel">
+        <p>1/3--md</p>
+        <p>u-valign-bottom</p>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<div class="container container--xl">
+  
+  <h1>Equal column heights</h1>
+  
+  <div class="flex flex--sm">
+    
+    <div class="flex__grid flex__grid--sm">
+      
+      <div class="flex__item flex__item--sm u-1-2--sm u-bg-alpha">
+        <div class="panel">
+          <p>1/2--sm</p>
+        </div>
+      </div><!--
+    --><div class="flex__item flex__item--sm u-1-2--sm u-bg-alpha">
+        <div class="panel">
+          <p>1/2--sm</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+          <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+        </div>
+      </div>
+      
+    </div>
+  
+  </div>
+  
+  <div class="flex flex--sm">
+    
+    <div class="flex__grid flex__grid--sm">
+      
+      <div class="flex__item flex__item--sm u-1-2--sm u-bg-alpha u-valign-middle">
+        <div class="panel">
+          <p>1/2--sm</p>
+          <p>u-valign-middle</p>
+        </div>
+      </div><!--
+    --><div class="flex__item flex__item--sm u-1-2--sm u-bg-alpha u-valign-middle">
+        <div class="panel">
+          <p>1/2--sm</p>
+          <p>u-valign-middle</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+          <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+        </div>
+      </div>
+      
+    </div>
+  
+  </div>
+  
+  <div class="flex flex--sm">
+    
+    <div class="flex__grid flex__grid--sm">
+      
+      <div class="flex__item flex__item--sm u-1-2--sm u-bg-alpha u-valign-bottom">
+        <div class="panel">
+          <p>1/2--sm</p>
+          <p>u-valign-bottom</p>
+        </div>
+      </div><!--
+    --><div class="flex__item flex__item--sm u-1-2--sm u-bg-alpha u-valign-bottom">
+        <div class="panel">
+          <p>1/2--sm</p>
+          <p>u-valign-bottom</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+          <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+        </div>
+      </div>
+      
+    </div>
+  
+  </div>
+  
+</div>
+
+<div class="container container--xl">
+  <h1>Varying grid container widths</h1>  
+</div>
+
+<div class="container container--xl">
+  
+  <h2>XL</h2>
+  
+  <div class="grid">
+    
+    <div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div><!--
+    --><div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div><!--
+    --><div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div>
+      
+   </div>
+  
+</div>
+
+<div class="container container--lg">
+  
+  <h2>LG</h2>
+  
+  <div class="grid">
+    
+    <div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div><!--
+    --><div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div><!--
+    --><div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div>
+      
+  </div>
+  
+</div>
+
+<div class="container container--md">
+  
+  <h2>MD</h2>
+  
+  <div class="grid">
+    
+    <div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div><!--
+    --><div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div><!--
+    --><div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div>
+  
+  </div>
+  
+</div>
+
+<div class="container container--sm">
+    
+  <h2>SM</h2>
+  
+  <div class="grid">
+    
+    <div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div><!--
+    --><div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div><!--
+    --><div class="grid__item u-1-3--md">
+        <div class="panel">
+          <p>1/3--md</p>
+        </div>
+      </div>
+      
+  </div>
+  
+</div>
+  
+</body>
+</html>

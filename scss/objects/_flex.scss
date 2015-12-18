@@ -1,0 +1,43 @@
+$flex-gutter: rem($global-spacing-unit);
+
+.flex {
+	list-style: none;
+    margin:  0;
+    padding: 0;
+	
+	&__grid {
+		list-style: none;
+		margin:  0;
+		padding: 0;
+		display: block;
+	}
+		
+	&__item {
+		display: block;
+		margin-bottom: $flex-gutter;
+	}
+}
+
+@each $key, $breakpoint in $breakpoints {
+	$alias: $key;
+	
+	@include breakpoint($alias) {
+		.flex--#{$alias} {
+			margin-left: -$flex-gutter;
+			margin-right: -$flex-gutter;
+			margin-bottom: $flex-gutter;
+		}
+		
+		.flex__grid--#{$alias} {
+			display: table;
+			width: 100%;
+			table-layout: fixed;
+			border-spacing: $flex-gutter 0;
+		}
+		
+		.flex__item--#{$alias} {
+			display: table-cell;
+			vertical-align: top;
+		}
+	}
+}

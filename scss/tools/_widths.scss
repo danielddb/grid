@@ -1,0 +1,25 @@
+@function calculate-width($dividend, $divisor) {
+	@return ($divisor / $dividend) * 100%;
+}
+
+@mixin generate-widths($columns, $seperator, $breakpoint: null) {
+    @if $breakpoint != null {
+		$breakpoint: --#{$breakpoint}
+	}
+	
+	// Loop through the number of columns for each denominator of our fractions.
+	@each $denominator in $columns {
+		@if ($denominator == 1) {
+            .u-1#{$seperator}1#{$breakpoint} {
+                width: 100%;
+            }
+        }
+		@else {
+			@for $numerator from 1 to $denominator {
+				.u-#{$numerator}#{$seperator}#{$denominator}#{$breakpoint} {
+					width: calculate-width($denominator, $numerator);
+				}
+			}
+		}
+	}	
+}
