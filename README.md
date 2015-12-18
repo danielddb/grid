@@ -17,6 +17,7 @@ To just view the grid, open `index.html`.
 * No more clear floats / clearfixes.
 * It can handle any width you throw at it ranging from twelfths, all the way to one-whole.
 * Nest grids infinite number of times.
+* Mobile first media queries.
   
 ## Tests
 * IE Edge - Passed
