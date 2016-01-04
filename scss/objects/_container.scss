@@ -4,18 +4,10 @@
 	margin: 0 auto;
 }
 
-.container--sm {
-	max-width: rem(420px);
-}
-
-.container--md {
-	max-width: rem(768px);
-}
-
-.container--lg {
-	max-width: rem(960px);
-}
-
-.container--xl {
-	max-width: rem(1020px);
+@each $key, $breakpoint in $breakpoints {
+	$alias: $key;
+	
+	.container--#{$alias} {
+		max-width: rem($breakpoint);
+	}
 }

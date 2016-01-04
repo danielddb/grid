@@ -1,6 +1,7 @@
 $grid-gutter: rem($global-spacing-unit);
+$block: 'grid';
 
-.grid {
+.#{$block} {
 	list-style: none;
     margin:  0;
     padding: 0;
@@ -8,6 +9,10 @@ $grid-gutter: rem($global-spacing-unit);
     
     &--gutterless {
         margin-left: 0;
+        
+        .#{$block}__item {
+            padding-left: 0;
+        }
     }
 	
 	&__item {
@@ -16,9 +21,5 @@ $grid-gutter: rem($global-spacing-unit);
         margin-bottom: $grid-gutter;
         vertical-align: top;
         width: 100%;
-	}
-    
-    &__item--gutterless {
-        padding-left: 0;
 	}
 }

@@ -10,7 +10,7 @@
 
 <body>
 
-<div class="container container--sm">
+<div class="container container--md">
   <h1>Motiviations for the new flexible grid</h1>
   <ul>
     <li>Not restrained to a fixed pixel grid. % and REMs only.</li>
@@ -20,6 +20,7 @@
     <li>It can handle any width you throw at it ranging from twelfths, all the way to one-whole.</li>
     <li>Nest grids infinite number of times.</li>
     <li>Mobile first media queries.</li>
+    <li>Reduced nested selectors.</li>
   </ul> 
   
   <h2>Tests</h2> 
@@ -37,7 +38,8 @@
   
   <h2>To be added</h2>
   <ul>
-    <li>Column offsetting</li>  
+    <li>Column offsetting</li>
+    <li>Gutter sizes</li> 
   </ul>
 </div> 
 
@@ -627,8 +629,9 @@
         
       </div>
       
-    </div><!--
-  -->
+    </div>
+    
+  </div>
   
 </div>
 
@@ -638,27 +641,27 @@
   
   <div class="grid grid--gutterless">
     
-    <div class="grid__item grid__item--gutterless u-2-12--md">
+    <div class="grid__item u-2-12--md">
       <div class="panel">
         <p>2-12-sm</p>
       </div>
     </div><!--
-  --><div class="grid__item grid__item--gutterless u-4-12--md">
+  --><div class="grid__item u-4-12--md">
       <div class="panel">
         <p>4-12-sm</p>
       </div>
     </div><!--
-  --><div class="grid__item grid__item--gutterless u-6-12--md">
+  --><div class="grid__item u-6-12--md">
       <div class="panel">
         <p>6-12-sm</p>
       </div>
     </div><!--
-  --><div class="grid__item grid__item--gutterless u-1-2--sm">
+  --><div class="grid__item u-1-2--sm">
       <div class="panel">
         <p>1-2-sm</p>
       </div>
     </div><!--
-  --><div class="grid__item grid__item--gutterless u-1-2--sm">
+  --><div class="grid__item u-1-2--sm">
       <div class="panel">
         <p>1-2-sm</p>
       </div>

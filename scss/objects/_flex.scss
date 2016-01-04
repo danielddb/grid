@@ -1,6 +1,7 @@
 $flex-gutter: rem($global-spacing-unit);
+$block: 'flex';
 
-.flex {
+.#{$block} {
 	list-style: none;
     margin:  0;
     padding: 0;
@@ -22,22 +23,23 @@ $flex-gutter: rem($global-spacing-unit);
 	$alias: $key;
 	
 	@include breakpoint($alias) {
-		.flex--#{$alias} {
+		.#{$block}--#{$alias} {
 			margin-left: -$flex-gutter;
 			margin-right: -$flex-gutter;
 			margin-bottom: $flex-gutter;
-		}
-		
-		.flex__grid--#{$alias} {
-			display: table;
-			width: 100%;
-			table-layout: fixed;
-			border-spacing: $flex-gutter 0;
-		}
-		
-		.flex__item--#{$alias} {
-			display: table-cell;
-			vertical-align: top;
+			
+			.#{$block}__grid {
+				display: table;
+				width: 100%;
+				table-layout: fixed;
+				border-spacing: $flex-gutter 0;
+			}
+			
+			.#{$block}__item {
+				display: table-cell;
+				vertical-align: top;
+			}
+			
 		}
 	}
 }
