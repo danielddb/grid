@@ -18,6 +18,7 @@ To just view the grid, open `index.html`.
 * It can handle any width you throw at it ranging from twelfths, all the way to one-whole.
 * Nest grids infinite number of times.
 * Mobile first media queries.
+* Reduced nested selectors.
   
 ## Tests
 * IE Edge - Passed
@@ -32,3 +33,4 @@ To just view the grid, open `index.html`.
 
 ## To be added
 * Column offsetting
+* Gutter sizes
